@@ -2,7 +2,7 @@ import CartWidget from "../CartWidget/CartWidget"
 
 const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary-780000" style={{backgroundColor: "#780000"}}>
             <div className="container-fluid">
                 <a href="#" className="navbar-brand">HYM MATERIALES</a>
                 <div className="collapse navbar-collapse" id="navbarNav">
