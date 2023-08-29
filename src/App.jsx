@@ -9,9 +9,9 @@ function App() {
     <div>
       <NavBar />
       <Routes>
-        <Route path="/PreEntrega1-Mercado/" element={<ItemListContainer />} />
-        <Route path="/PreEntrega1-Mercado/category/:categoryId" element={<ItemListContainer />} />
-        <Route path="/PreEntrega1-Mercado/item/:productId" element={<ItemDetailContainer />} />
+        <Route path="/PreEntrega2-Mercado/" element={<ItemListContainer />} />
+        <Route path="/PreEntrega2-Mercado/category/:categoryId" element={<ItemListContainer />} />
+        <Route path="/PreEntrega2-Mercado/item/:productId" element={<ItemDetailContainer />} />
       </Routes>
     </div>
   )

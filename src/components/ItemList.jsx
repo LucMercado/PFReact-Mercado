@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const ItemList = ( { items }) => {
   return (
     <div>
-      <h1>ItemList</h1>
+      <h1>Catalogo</h1>
 
       <ul>
         {items.map((item) => (
