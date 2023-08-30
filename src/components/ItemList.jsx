@@ -10,7 +10,7 @@ const ItemList = ( { items }) => {
       <ul>
         {items.map((item) => (
           <li key={item.id}>
-            <Link to={`/PreEntrega1-Mercado/item/${item.id}`}>
+            <Link to={`/PreEntrega2-Mercado/item/${item.id}`}>
             <h3>{item.name}</h3>
             <p>${item.price}</p>
             <p>{item.category}</p>
