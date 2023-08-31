@@ -7,17 +7,26 @@ const ItemList = ( { items }) => {
     <div>
       <h1>Catalogo</h1>
 
-      <ul>
+      <div className="container">
+      <ul className="row">
         {items.map((item) => (
-          <li key={item.id}>
+          <li key={item.id} className="card col-lg-4">
+            
             <Link to={`/PreEntrega2-Mercado/item/${item.id}`}>
-            <h3>{item.name}</h3>
-            <p>${item.price}</p>
-            <p>{item.category}</p>
+            <img src={`${item.image}`} className="card-img-top" alt="" style={{objectFit: "cover", height: "20rem"}}/>
+            <div className="card-body d-flex flex-column align-items-center">
+            <h3 className="card-title">{item.name}</h3>
+            <p className="card-text">${item.price}</p>
+            <p className="card-text">{item.category}</p>
+            <Link class="btn btn-primary" to="#">Agregar a carrito</Link>
+            </div>
+            
             </Link>
+            
           </li>
         ))}
       </ul>
+    </div>
     </div>
   )
 }

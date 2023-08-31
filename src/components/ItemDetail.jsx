@@ -13,8 +13,9 @@ const ItemDetail = ({item, isLoading}) => {
   return (
     <div>
       <h1>{item.name}</h1>
-      <p>{item.price}</p>
-      <p>{item.category}</p>
+      <img src={`${item.image}`} alt="" />
+      <p>Precio: {item.price}</p>
+      <p>Categoría: {item.category}</p>
     </div>
   )
 }
