@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom"
 
 const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary-780000" style={{backgroundColor: "#780000"}}>
+        <nav className="navbar navbar-expand-lg bg-body-tertiary-EDAE49" style={{backgroundColor: "#EDAE49"}}>
             <div className="container-fluid">
             <Link to="PreEntrega2-Mercado/" className="navbar-brand">HYM MATERIALES</Link>
                 <div className="collapse navbar-collapse" id="navbarNav">

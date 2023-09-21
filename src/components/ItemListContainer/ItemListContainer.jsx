@@ -14,7 +14,7 @@ const ItemListContainer = () => {
             .then((response) => {setItems(response)})
     }, [categoryId])
     
-    return <ItemList items={items} className="d-flex p-2"/>
+    return <ItemList items={items} />
 }
 
 export default ItemListContainer;

@@ -1,0 +1,5 @@
+.link:link, .link:visited, .link:active {
+    text-decoration: none;
+    color: black;
+}
+
