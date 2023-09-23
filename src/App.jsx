@@ -10,9 +10,9 @@ function App() {
     <CartProvider>
       <NavBar />
       <Routes>
-        <Route path="/PreEntrega2-Mercado/" element={<ItemListContainer />} />
-        <Route path="/PreEntrega2-Mercado/category/:categoryId" element={<ItemListContainer />} />
-        <Route path="/PreEntrega2-Mercado/item/:productId" element={<ItemDetailContainer />} />
+        <Route path="/PFReact-Mercado/" element={<ItemListContainer />} />
+        <Route path="/PFReact-Mercado/category/:categoryId" element={<ItemListContainer />} />
+        <Route path="/PFReact-Mercado/item/:productId" element={<ItemDetailContainer />} />
       </Routes>
     </CartProvider>
   )
