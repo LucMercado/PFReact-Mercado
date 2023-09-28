@@ -3,6 +3,7 @@ import CartContext from "../context/CartContext"
 import { getCartTotal, mapCartToOrderItems } from "../utils"
 import { serverTimestamp } from "firebase/firestore"
 import { createOrder } from "../services"
+import Field from "./Field/Field"
 
 
 const Checkout = () => {
@@ -16,7 +17,7 @@ const Checkout = () => {
 
     const handleCheckout = () => {
         const order = {
-            buyer: {},
+            buyer: {name, phone, email},
             items: mapCartToOrderItems(cart),
             total,
             date: serverTimestamp()
@@ -29,8 +30,35 @@ const Checkout = () => {
                 setIsLoading(false)
                 clear()
             })
-            
+
     }
+
+    const [formState, setFormState] = useState({
+        name: '',
+        phone: '',
+        email: '',
+    });
+
+    const { name, phone, email } = formState;
+
+    const onChange = (event) => {
+        setFormState({
+
+            ...formState,
+            [event.target.name]: event.target.value,
+
+        });
+    };
+
+    const isFormValid = name && phone && email;
+
+    const onSubmit = (event) => {
+        event.preventDefault();
+
+        if (isFormValid) {
+            console.log(`Your name is ${name} your phone ${phone} and you email ${email} `);
+        }
+    };
 
     return (
         <div>
@@ -59,10 +87,17 @@ const Checkout = () => {
 
                     <div>
                         <h3>Formulario de contacto</h3>
-                        {/* TODO: Formulario */}
+
+                        <form onSubmit={onSubmit}>
+                            <Field label="Nombre" name="name" onChange={onChange} />
+                            <Field label="Teléfono" name="phone" onChange={onChange} />
+                            <Field label="Email" name="email" onChange={onChange} />
+                            
+
+                        </form>
                     </div>
 
-                    <button onClick={handleCheckout}>Finalizar compra</button>
+                    <button disabled={!isFormValid} type="submit" onClick={handleCheckout}>Finalizar compra</button>
                     {isLoading && <p>Procesando compra...</p>}
                 </>
             )}
