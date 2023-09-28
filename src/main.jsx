@@ -8,13 +8,13 @@ import './index.css'
 import { initializeApp } from "firebase/app"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBBFOlVofi9bn8wlP--RlO6ekfQ_h-4iBY",
-  authDomain: "hym-materiales.firebaseapp.com",
-  projectId: "hym-materiales",
-  storageBucket: "hym-materiales.appspot.com",
-  messagingSenderId: "665738936029",
-  appId: "1:665738936029:web:9d76b6bdf7151a1de76534",
-  measurementId: "G-QS9D1DS0KG"
+  apiKey: import.meta.env.VITE_FIRESTORE_API_KEY,
+  authDomain: import.meta.env.VITE_FIRESTORE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIRESTORE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIRESTORE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIRESTORE_MESSASING_SENDER_ID,
+  appId: import.meta.env.VITE_FIRESTORE_APP_ID,
+  measurementId: import.meta.env.VITE_FIRESTORE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
