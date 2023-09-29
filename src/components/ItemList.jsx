@@ -14,7 +14,7 @@ const ItemList = ( { items }) => {
           <li key={item.id} className="card col-lg-4">
             
             <Link to={`/PFReact-Mercado/item/${item.id}`} className={styles.link}>
-            <img src={`/img/${item.imageUrl}`} className="card-img-top img-thumbnail mt-2" alt="" style={{objectFit: "cover", height: "20rem"}}/>
+            <img src={`../img/${item.imageUrl}`} className="card-img-top img-thumbnail mt-2" alt="" style={{objectFit: "cover", height: "20rem"}}/>
             <div className="card-body d-flex flex-column align-items-center">
             <h3 className="card-title">{item.name}</h3>
             <p className="card-text">${item.price}</p>
