@@ -1,8 +1,39 @@
-# React + Vite
+# Proyecto Final: H&M Materiales
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Esta es la entrega final de mi proyecto del curso de React de CODERHOUSE. La consigna nos pedía desarrollar una app de un e-commerce para poder vender productos de un rubro a elección. 
+Mi elección se trata de una venta de materiales para la construcción de un integrante de mi familia, la idea a futuro es hacerlo 100% funcional con todos los requisitos que el dueño del comercio me pida.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Cómo levantar el proyecto
+
+Una vez descargado el repositorio, deberas completar los campos en el archivo '.env' de ejemplo que se encuentra en la raíz del repositorio, con los valores correspondiente que te envíe, para poder accder a la base de datos de firebase.
+Una vez seteados los valores de entorno, deberás tener instalado npm en tu máquina, e insertar los siguientes comandos en la consola, desde el directorio raíz del repositorio:
+```
+npm install
+npm start
+```
+
+## Componentes
+
+### Navbar
+
+El navbar es el componente que muestra y da acceso a los links de las distintas secciones del e-commerce. Además contiene el CartWidget que nos permite ir al resumen de la compra para finalizarla.
+
+### Item List
+Este componente nos muestra el **catálogo** de productos del sitio. Desde el catálogo podemos acceder al detalle de cada producto para conocer más detalles y agregar el producto al carrito.
+
+### Item Detail
+
+Este componente muestra el **detalle del producto**, su descripción, su precio y la foto. Nos permite agregar el producto al carrito y seleccionar la cantidad de productos a agregar.
+
+### Cart Widget
+
+Este componente nos muestra la cantidad de productos que contiene nuestro carrito, y además nos permite acceder al checkout donde estará el resumen de la compra y podremos finalizarla.
+
+### Checkout
+
+En este componente se encuentra el resumen de la compra, detallando las cantidades y los precios de los productos agregados. Además nos permite finalizar la compra y emitir la orden.
+
+## Demo
+El siguiente video muestra el funcionamiento de la app del e-commerce:
