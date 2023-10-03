@@ -11,7 +11,7 @@ const Checkout = () => {
 
     const [isLoading, setIsLoading] = useState(false)
 
-    const { cart, clear, addItem, removeItem } = useContext(CartContext)
+    const { cart, clear, addItem, removeItem, removeOneItem } = useContext(CartContext)
 
     const total = getCartTotal(cart)
 
@@ -57,6 +57,8 @@ const Checkout = () => {
     }
 
 
+
+
     return (
         <div>
             <h1>CHECKOUT</h1>
@@ -71,10 +73,10 @@ const Checkout = () => {
                             {cart.map((item) => (
                                 <li key={item.id}>
                                     <h4>{item.name}</h4>
-                                    <p>Cantidad: {item.quantity}</p>
+                                    <p>Cantidad: {item.quantity} <button onClick={() => removeOneItem(item)}> - </button> <button onClick={() => addItem(item, 1)}> + </button></p>
                                     <p>Precio por unidad: ${item.price}</p>
                                     <p>Subtotal: ${item.price * item.quantity}</p>
-                                    
+                                    <button onClick={() => removeItem(item.id) }>Eliminar producto del carrito</button>
                                     <hr />
 
                                     <button onClick={clear}>Vaciar carrito</button>
