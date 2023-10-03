@@ -24,7 +24,7 @@ const ItemDetail = ({item, isLoading, addItem}) => {
           <h2>Precio: ${item.price}</h2>
           <p>Categoría: {item.categoryId}</p>
           <p>Descripción: {item.description}</p>
-          <button onClick={() => addItem(item, 1)} class="btn btn-primary" style={{backgroundColor: "#00798C"}}>Agregar a carrito</button>
+          <button onClick={() => addItem(item, 1)} className="btn btn-primary" style={{backgroundColor: "#00798C"}}>Agregar a carrito</button>
           </div>
         </div>
         <img src={`../img/${item.imageUrl}`} alt="" className="img-thumbnail" />

@@ -19,7 +19,7 @@ const ItemList = ( { items }) => {
             <h3 className="card-title">{item.name}</h3>
             <p className="card-text">${item.price}</p>
             <p className="card-text">{item.categoryId}</p>
-            <button class="btn btn-primary" style={{backgroundColor: "#00798C"}}>Agregar a carrito</button>
+            <button className="btn btn-primary" style={{backgroundColor: "#00798C"}}>Agregar a carrito</button>
             </div>
             
             </Link>

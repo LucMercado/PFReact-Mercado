@@ -11,7 +11,7 @@ const Checkout = () => {
 
     const [isLoading, setIsLoading] = useState(false)
 
-    const { cart, clear } = useContext(CartContext)
+    const { cart, clear, addItem, removeItem } = useContext(CartContext)
 
     const total = getCartTotal(cart)
 
@@ -37,9 +37,9 @@ const Checkout = () => {
         name: '',
         phone: '',
         email: '',
-    });
+    })
 
-    const { name, phone, email } = formState;
+    const { name, phone, email } = formState
 
     const onChange = (event) => {
         setFormState({
@@ -47,18 +47,15 @@ const Checkout = () => {
             ...formState,
             [event.target.name]: event.target.value,
 
-        });
-    };
+        })
+    }
 
-    const isFormValid = name && phone && email;
+    const isFormValid = name && phone && email
 
     const onSubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault()
+    }
 
-        if (isFormValid) {
-            console.log(`Your name is ${name} your phone ${phone} and you email ${email} `);
-        }
-    };
 
     return (
         <div>
@@ -77,7 +74,10 @@ const Checkout = () => {
                                     <p>Cantidad: {item.quantity}</p>
                                     <p>Precio por unidad: ${item.price}</p>
                                     <p>Subtotal: ${item.price * item.quantity}</p>
+                                    
                                     <hr />
+
+                                    <button onClick={clear}>Vaciar carrito</button>
                                 </li>
                             ))}
                         </ul>
