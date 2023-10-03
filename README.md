@@ -37,3 +37,7 @@ En este componente se encuentra el resumen de la compra, detallando las cantidad
 
 ## Demo
 El siguiente video muestra el funcionamiento de la app del e-commerce:
+
+https://github.com/LucMercado/PFReact-Mercado/assets/130707812/eb3e0e97-f208-4b0e-be73-3f07bfc684a5
+
+
